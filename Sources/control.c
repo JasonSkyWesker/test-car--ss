@@ -56,6 +56,8 @@ void PitISR(void)
 		{
 			trigger_supersonic_0();
 			get_supersonic_time_0();
+			//while((ABS((WORD)(tmp_time.R))/100)<100)
+			//{}				
 			LCD_Write_Num(96,6,(ABS((WORD)(tmp_time.R))/100),5);
 		}
 		counter=0;
